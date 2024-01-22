@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="subjectpopup.css">
+</head>
+<body>
+    <nav>
+        <img src="eng_logo.png" alt="" class="eng_logo">
+    </nav>
+
+    <table>
+        <tr>
+            <th>Sr. no</th>
+            <th>Faculty</th>
+            <th >Allocated subjects</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Faculty name</td>
+            <td onclick="showPopup('Subject 1', 'Faculty 1')">Subjects</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Faculty name</td>
+            <td onclick="showPopup('Subject 2', 'Faculty 2')">Subjects</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Faculty name</td>
+            <td onclick="showPopup('Subject 3', 'Faculty 3')">Subjects</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Faculty name</td>
+            <td onclick="showPopup('Subject 4', 'Faculty 4')">Subjects</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Faculty name</td>
+            <td onclick="showPopup('Subject 5', 'Faculty 5')">Subjects</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+
+    <div id="subjectPopup" class="popup"></div>
+
+    <script src="subjectpopup.js"></script>
+
+</body>
+</html>

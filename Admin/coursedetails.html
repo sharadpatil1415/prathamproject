@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="coursedetails.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    
+</head>
+<body>
+    <nav>
+        <img src="eng_logo.png" alt="" class="eng_logo">
+        <!-- <img src="settings.jpg" alt="settings" class="eng_logo"> -->
+    </nav>
+
+    <h2>COURSE DETAILS</h2>
+
+    <div class="container">
+        <form class="course-form">
+            
+                Course Name :<input type="text" id="course-name" name="course-name" required>
+                Course Code :<input type="text" id="course-code" name="course-code" required>
+                Total Sessions :<input type="number" id="total-sessions" name="total-sessions" required>
+            
+
+                <button type="button" onclick="submitForm()">SUBMIT</button>
+        </form>
+    </div>
+    <script>
+        function submitForm() {
+            alert("Course submitted successfully!");
+            document.querySelector('button').classList.add('success');
+        }
+    </script>
+</body>
+</html>
