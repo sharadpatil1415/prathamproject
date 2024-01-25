@@ -23,7 +23,7 @@ nav{
 
     background-color: #095899;
     padding: 10px;
-    width: 104px;
+    
     height: 34px;
     border: none;
     border-radius: 5px;
@@ -90,21 +90,40 @@ nav{
     align-items: center;
     justify-content: center;
   }
+
+  .popupContent p{
+
+    position: relative;
+    color: black;
+    font-weight: bolder;
+    top: -32px;
+    left: -216px;
+    background-color: transparent;
+}
   
   .popupContent {
     background: #fff;
-    padding: 20px;
+    padding: 43px 6px;
     border-radius: 8px;
     text-align: center;
   }
   
   .closeBtn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: 211px;
+    right: 429px;
+    font-size: 30px;
     cursor: pointer;
+    background: transparent;
+    font-weight: bolder;
   }
+
+  .closeBtn:hover{
+      
+      
+    color: #ab350d;
+}
+
   .co{
     display: flex;
     margin: 10px;
@@ -117,4 +136,33 @@ nav{
     margin: 5px 20px;
     padding: 5px;
    
+}
+
+.co-input {
+
+    width: 568px;
+    height: 65px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+    /* border-radius: 5px;
+    border-color: black ; */
+    position: relative;
+    top: -22px;
+    right: -42px;
+}
+
+.co-submit {
+
+    position: relative;
+    bottom: -45px;
+    right: 283px;
+    padding: 10px 15px;
+    background-color: rgb(86, 148, 84);
+    font-weight: bold;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+
+
 }
