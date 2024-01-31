@@ -68,3 +68,46 @@ a
     cursor: pointer;
     
 }
+.settings {
+      
+    position: relative;
+     height: 20px ;
+     height: 32px;
+     left: 1487px;
+     bottom: 137px;
+     background: transparent;
+}
+.navbar a {
+position: relative;
+text-decoration: none;
+color: #fff;
+width: 100px;
+left: 995px;
+bottom: 52px;
+margin: 8px;
+background: transparent;
+}
+
+.profile{
+   display: flex;
+   position: relative;
+   height: 20px ;
+   height: 32px;
+   left: 1441px;
+   bottom: 104px;
+   background: transparent;
+
+
+
+}
+.username {
+ position: relative;
+ color: #fff;
+ left: 1251px;
+ bottom: 77px;
+ background: transparent;
+
+
+
+
+}
