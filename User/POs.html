@@ -9,6 +9,118 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/POs.css">
 </head>
+<style>
+    *
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Young Serif', serif; */
+    background: #F6F6F6;
+}
+nav{
+    width: 1536px;
+    height: 76px;
+    background: #095899;
+}
+.eng_logo{
+    height: 56px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.direct{
+    margin: 10px;
+}
+.po{
+    display: flex;
+    margin: 15px;
+    background-color: #FFFFFF;
+    width: 1475px;
+    height: 68px;
+    border: 0.5px solid #B4B4B4;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+h3{
+    margin: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+/* Style for the button that opens the dropdown */
+.dropdown button {
+    padding: 10px;
+    background-color:#FFFFFF;
+    color: #095899;
+    border:0.5px solid #B4B4B4;
+    border-radius: 5px;
+    width: 1400px;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style for the individual dropdown items */
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    border:0.5px solid #B4B4B4;
+    border-radius: 5px;
+    width: 1390px;
+    color: #333;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown content when the button is hovered over */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popupContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+</style>
 <body>
     <nav>
         <img src="Img/eng_logo.png" alt="" class="eng_logo">
