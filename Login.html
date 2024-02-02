@@ -93,7 +93,7 @@
 
         .right-side {
             flex: 1;
-            background-image: url('mec2.png'); /* Add your background image here */
+            background-image: url('../img/mec2.png'); /* Add your background image here */
             background-size: cover; /* Adjust background size as needed */
         }
     </style>
@@ -106,7 +106,7 @@
                 <h2>WELCOME BACK</h2>
                 <p>Welcome back! Please enter your details.</p>
                 <!-- Form tag added here -->
-                <form action="#" method="post">
+                <form action="Admin/courses.html" method="GET">
                     <div class="form-group">
                         <label for="username">UserName</label>
                         <input type="text" id="username" name="username" placeholder="Enter your username">
@@ -123,14 +123,23 @@
                             <a href="#">Forgot password</a>
                         </div>
                     </div>
-                    <button type="submit" class="sign-in-btn"><a href="/User/Courses.html">Sign in</a></button>
+                    <!-- <button type="submit" class="sign-in-btn"><a href="/Courses.html">Sign in</a></button> -->
+                    <button type="submit" class="sign-in-btn" onclick="navigateToCourses()" >Sign In</button>
+                    
+
+                    
                 </form>
-                <!-- End of form tag -->
+                <!-- End of form tag -->    
             </div>
         </div>
         <div class="right-side">
             
         </div>
     </div>
+    <script>
+         function navigateToCourses() {
+                window.location.href = 'Admin/courses.html';
+  }
+    </script>
 </body>
 </html>

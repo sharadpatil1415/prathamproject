@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="CSS/Courses.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+</head>
+<style>
+    
+  *
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Young Serif', serif; */
+    /* background: #F6F6F6; */
+}
+.direct{
+    margin: 10px;
+}
+
+.rec1{
+    color: #095899;
+    display: flex;
+    margin: 40px auto;
+    width: 497px;
+    height: 40px;
+    background-color: #E5F2FC;
+    border-radius: 5px;
+    border: 0.5px solid #BEB4B4;
+    justify-content: center;
+    align-items: center;
+}
+
+.term{
+    background-color:#E5F2FC ;
+}
+
+h2
+{
+    display: flex;
+    justify-content: center;
+}
+table,tr,td,th{
+    margin: 20px auto;
+    /* justify-content: center; */
+    align-items: center;
+    /* width: 50%; */
+    border: 0.5px solid #BEB4B4;
+    border-collapse: collapse;
+   padding: 10px 20px;
+
+}
+
+th,tr,td{
+    width: 315px;
+     background-color: white; 
+}
+th{
+    background-color: #E5F2FC;
+    color: #095899;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+    background: white;
+    cursor: pointer;
+    
+}
+
+.navbar {
+    background-color: #095899;
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.eng_logo {
+    border-radius: 5px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px; 
+
+}
+
+nav a {
+   position: relative;
+   left: 932px;
+    background-color: #095899;
+    text-decoration: none;
+    color: black;
+}
+
+.username {
+    margin-left: auto;
+    margin-right: 20px;
+    color: black;
+}
+
+.profile img {
+    height: 56px;
+    border-radius: 50%;
+}
+
+.settings {
+    height: 56px;
+    margin-left: 20px; 
+}
+
+.box  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66%;
+}
+.rec1 {
+    margin-bottom: 20px; 
+}
+
+.sem {
+    width: 200px;  
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    color: #333; 
+}
+
+.sem:focus {
+    outline: none; 
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+
+</style>  
+<body>
+    <nav class="navbar">
+        <img src="img/eng_logo.png" alt="" class="eng_logo">
+        <!-- <img src="settings.jpg" alt="settings" class="eng_logo"> -->
+       <ul> 
+        <li> <a href="/Admin/coursedetails.html" > Add Course</a> </li>
+        <li><a href="/Admin/course-detail.html" >Add Teachers</a> </li>  
+        </ul>
+        <span class="username" th:text{}>shubdha patil ma'am</span>
+        <span class="profile" th:img src {} ><img src="/Admin/proflie.png" alt=""></span>
+        <img src="img/Setting2.jpg" alt="" class="settings" >
+       
+    </nav>
+    <div class="direct">
+        <span>Courses</span> 
+    </div>
+    
+<center>
+    <div class="box">
+        <div class="rec1">
+            <span class="term">Term</span>
+            <div class="dropdown">
+                <!-- <label for="cars">Choose a car:</label> -->
+
+
+            </div>
+        </div>         
+        <div class="rec1">
+            <!-- <span class="term">Second</span> -->
+            <select name="sem" id="sem" class="sem">
+                <option value=" SY B Sem III">SY B Sem III</option>
+                <option value="SY B Sem III">SY B Sem III</option>
+                <option value="SY B Sem III">SY B Sem III</option>
+                <option value="SY B Sem III">SY B Sem III</option>
+                </select>
+        </div>
+    </div>
+   
+</center>
+
+<h2>Courses</h2>
+
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Courses</th>
+    </tr>
+   
+        <tr>
+            <td>201CSL203</td>
+            <td><a href="Po-Pso.html">Computer Organization & Microprocessors-TH</a></td>
+            <td>42</td>
+        </tr>
+        <tr>
+            <td>201CSL203</td>
+            <td><a href="Po-Pso.html">Computer Organization & Microprocessors-TH</a></td>
+            <td>42</td>
+        </tr>
+        <tr>
+            <td>201CSL203</td>
+            <td><a href="Po-Pso.html">Computer Organization & Microprocessors-TH</a></td>
+            <td>42</td>
+        </tr>
+        <tr>
+            <td>201CSL203</td>
+            <td><a href="Po-Pso.html">Computer Organization & Microprocessors-TH</a></td>
+            <td>42</td>
+        </tr>
+    
+</table>
+    
+        
+   <!-- <script src="rectangle7.js"></script> -->
+</body>
+</html>

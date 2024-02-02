@@ -6,12 +6,132 @@
     <title>Courses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="subjectpopup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
 </head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+table, tr, td, th {
+    margin: 20px auto;
+    align-items: center;
+    border: 0.5px solid #BEB4B4;
+    border-collapse: collapse;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+th, tr, td {
+    width: 315px;
+    background-color: white;
+}
+
+th {
+    background-color: #E5F2FC;
+    color: #095899;
+}
+
+td {
+    text-align: center;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.popup button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #095899;
+}
+.navbar {
+    background-color: #095899;
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.eng_logo {
+    border-radius: 5px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px; 
+
+}
+
+nav a {
+   position: relative;
+   left: 932px;
+    background-color: #095899;
+    text-decoration: none;
+    color: black;
+}
+
+.username {
+    margin-left: auto;
+    margin-right: 20px;
+    color: black;
+}
+
+.profile img {
+    height: 56px;
+    border-radius: 50%;
+}
+
+.settings {
+    height: 56px;
+    margin-left: 20px; 
+ 
+}
+.add-admin-btn{
+    align-items: center;
+}
+</style>
 <body>
-    <nav>
-        <img src="eng_logo.png" alt="" class="eng_logo">
+    <nav class="navbar">
+        <img src="../img/eng_logo.png" alt="" class="eng_logo">
+        <!-- <img src="settings.jpg" alt="settings" class="eng_logo"> -->
+       <ul> 
+        <li> <a href="/Admin/coursedetails.html" > Add Course</a> </li>
+        <li><a href="/Admin/course-detail.html" >Add Teachers</a> </li>  
+        </ul>
+        <span class="username" th:text{}>shubdha patil ma'am</span>
+        <span class="profile" th:img src {} ><img src="/Admin/proflie.png" alt=""></span>
+        <img src="../img/Setting2.jpg" alt="" class="settings" >
+       
     </nav>
 
     <table>
@@ -47,10 +167,52 @@
         </tr>
         <!-- Add more rows as needed -->
     </table>
+    <!-- <button class="btn btn-success add-admin-btn">Add as admin</button> -->
 
     <div id="subjectPopup" class="popup"></div>
 
-    <script src="subjectpopup.js"></script>
+    <script>
+        function showPopup(subject, faculty) {
+    const popup = document.getElementById('subjectPopup');
+    popup.innerHTML = `
+       <button onclick="hidePopup()">&#8592;</button>
+       <center><h2 style="margin-bottom: 10px; font-size:20px; font-weight: bold;">Allocated Subject</h2></center>
+        <h3 style="margin-bottom: 10px; font-size:20px;">Faculty Name: ${faculty}</h3>
+        
+
+
+        <table>
+            <tr>
+                <th>Sr. No</th>
+                <th>Course Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>${subject}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>${subject}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>${subject}</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>${subject}</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    `;
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('subjectPopup');
+    popup.style.display = 'none';
+}
+    </script>
 
 </body>
 </html>

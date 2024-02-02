@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+</head>
+<style>
+    *
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Young Serif', serif; */
+    /* background: #F6F6F6; */
+    overflow-x: hidden;
+}
+.navbar {
+    background-color: #095899;
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.eng_logo {
+    border-radius: 5px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px; 
+
+}
+
+nav a {
+   position: relative;
+   left: 932px;
+    background-color: #095899;
+    text-decoration: none;
+    color: black;
+}
+
+.username {
+    margin-left: auto;
+    margin-right: 20px;
+    color: black;
+}
+
+.profile img {
+    height: 56px;
+    border-radius: 50%;
+}
+
+.settings {
+    height: 56px;
+    margin-left: 20px; 
+}
+.courses{
+    margin: 10px;
+}
+.co-btn{
+
+    background-color: #095899;
+    padding: 10px;
+    position: relative;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    left: 936px;
+    color: white;
+    text-align: center;
+}
+.pos{
+    background-color:#E5F2FC;
+    /* display: flex; */
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 50px;
+    border: 0.5px solid #B4B4B4;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+
+      
+}
+
+.pos a{
+    text-decoration: none;
+    color: #095899;
+}
+.pso a{
+    text-decoration: none;
+    color: #095899;
+}
+
+.po-btn{
+    display: block;
+    background-color:#E5F2FC ;
+    padding: 10px;
+   
+}
+.pos-btn{
+    width: 535px;
+    margin: 5px 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+.pso-btn{
+    width: 900px;
+    margin: 5px 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .popupContent p{
+
+    position: relative;
+    color: black;
+    font-weight: bolder;
+    top: -32px;
+    left: -216px;
+    background-color: transparent;
+}
+  
+  .popupContent {
+    background: #fff;
+    padding: 43px 6px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 211px;
+    right: 429px;
+    font-size: 30px;
+    cursor: pointer;
+    background: transparent;
+    font-weight: bolder;
+  }
+
+  .closeBtn:hover{
+      
+      
+    color: #ab350d;
+}
+
+  .co{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    display: block;
+   
+}
+.co-btn-js{
+    display: inline;
+    width: 535px;
+    margin: 5px 20px;
+    padding: 5px;
+   
+}
+
+.co-input {
+
+    width: 568px;
+    height: 65px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+    /* border-radius: 5px;
+    border-color: black ; */
+    position: relative;
+    top: -22px;
+    right: -42px;
+}
+
+.co-submit {
+
+    position: relative;
+    bottom: -45px;
+    right: 283px;
+    padding: 10px 15px;
+    background-color: rgb(86, 148, 84);
+    font-weight: bold;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+
+
+}
+.edit-co{
+    padding: 5px;
+}
+.btn-success, .btn-danger{
+    padding: 5px;
+    width: 75px;
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <img src="img/eng_logo.png" alt="" class="eng_logo">
+        <!-- <img src="settings.jpg" alt="settings" class="eng_logo"> -->
+       <ul> 
+        <li> <a href="/Admin/coursedetails.html" > Add Course</a> </li>
+        <li><a href="/Admin/course-detail.html" >Add Teachers</a> </li>  
+        </ul>
+        <span class="username" th:text{}>shubdha patil ma'am</span>
+        <span class="profile" th:img src {} ><img src="/Admin/proflie.png" alt=""></span>
+        <img src="img/Setting2.jpg" alt="" class="settings" >
+       
+    </nav>
+    
+    <div class="courses">
+        <span>Courses</span> <span> >> </span> <span>Computer Organization & Microprocessors-TH</span>
+        <span>
+            <button id="add-co-btn" class="co-btn" onclick="
+
+        ">
+           + Add CO
+            </button>
+        </span>
+    </div>
+
+    <!-- open pop up -->
+    <div id="popupContainer">
+        <div class="popupContent">
+          <span class="closeBtn" onclick="closePopup()">&times;</span>
+          <p>Add course Outcome</p>
+          <input type="text" class="co-input">
+          <button class="co-submit">Submit</button>
+        </div>
+      </div>
+      <div class="co">
+        <div class="co-btn-js">
+            <!-- <button class="pos-btn">PO1: Engineering knowledge</button><br> 
+            <button class="pos-btn">PO1: Engineering knowledge</button><br> 
+            <button class="pos-btn">PO1: Engineering knowledge</button> <br> -->
+            <input type="text" class="pos-btn" value="PO1: Engineering knowledge"> 
+           
+        
+            </div>
+      </div>
+     
+      <div class="pos">
+        Program Outcomes
+        <div class="po-btn">
+        <button class="pos-btn"><a href="POs.html">PO 1: Engineering knowledge</a></button><br> 
+        <button class="pos-btn"><a href="POs.html">PO 2: Problem analysis</a></button><br> 
+        <button class="pos-btn"><a href="POs.html">PO 3: Design/development of solutions</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 4: Conduct investigations of complex problems</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 5: Modern tool usage</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 6: The engineer and society</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 7: Environment and sustainability</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 8: Ethics</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 9: Individual and team work</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 10: Communication</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 11: Project management and finance</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 12: Life-long learning</a></button> <br>
+        <button class="pos-btn"><a href="POs.html">PO 12: Life-long learning</a></button> <br>
+        </div>
+        
+
+    </div>
+    
+
+    <div class="pos">
+        Program Specific Outcomes
+        <div class="po-btn">
+        <button class="pso-btn"><a href="pi-pso1.html">PSO1: To design and manufacture the components and system as per requirement</a></button><br> 
+        <button class="pso-btn"><a href="pi-pso2.html">PSO 2: To apply his knowledge in thermal science and management practice as a professional or entrepreneur.</a></button><br> 
+        
+        </div>
+        
+
+    </div>
+<!-- <script src="JavaScript/Po-Pso.js"></script> -->
+<script>
+    document.getElementById('add-co-btn').addEventListener('click', openPopup);
+
+function openPopup() {
+document.getElementById('popupContainer').style.display = 'flex';
+}
+
+function closePopup() {
+document.getElementById('popupContainer').style.display = 'none';
+}
+
+const colist = [
+    
+];
+rendercolist();
+function rendercolist()
+{
+    let colisthtml = '';
+    
+    colist.forEach((coObject,index) =>
+    {
+        const {text1} = coObject;
+        const html = 
+        `
+        <input type="text" class="pos-btn" value=${text1}> <button class="btn btn-success" >Edit</button> <button class="btn btn-danger">Delete</button>
+        `;
+        colisthtml += html;
+    });
+
+    document.querySelector('.co-btn-js')
+    .innerHTML = colisthtml;
+    
+}
+
+document.querySelector('.co-submit')
+.addEventListener('click', ()=> {
+    addco();
+});
+
+function addco()
+{
+    const inputElement = document.querySelector('.co-input');
+    const text1 = inputElement.value;
+
+    colist.push({
+        text1
+    });
+    inputElement.value = '';
+    rendercolist();
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

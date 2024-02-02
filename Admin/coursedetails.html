@@ -13,17 +13,153 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
     
 </head>
+<style>
+    *
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.term{
+    background-color:#E5F2FC ;
+}
+
+h2
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    color: rgb(37, 37, 96);
+}
+
+.eng_logo{
+    height: 56px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd; /* Border around the form */
+    border-radius: 5px; /* Rounded corners for the border */
+}
+.container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form.course-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #249242;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px 2px;
+}
+
+button:hover {
+    background-color: #333;
+}
+button.success {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+button.success:hover {
+    background-color: #27ae60;
+}
+.navbar {
+    background-color: #095899;
+    display: flex;
+    align-items: center;
+}
+
+.eng_logo {
+    border-radius: 5px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px; 
+
+}
+
+nav a {
+   position: relative;
+   left: 932px;
+    background-color: #095899;
+    text-decoration: none;
+    color: black;
+}
+
+.username {
+    margin-left: auto;
+    margin-right: 20px;
+    color: black;
+}
+
+.profile img {
+    height: 56px;
+    border-radius: 50%;
+}
+
+.settings {
+    height: 56px;
+    margin-left: 20px; 
+}
+</style>
 <body>
     <nav class="navbar">
-        <img src="eng_logo.png" alt="" class="eng_logo">
+        <img src="../img/eng_logo.png" alt="" class="eng_logo">
         <!-- <img src="settings.jpg" alt="settings" class="eng_logo"> -->
        <ul> 
-        <li> <a href="/Admin/courses.html" > Add Course</a> </li>
+        <li> <a href="/Admin/coursedetails.html" > Add Course</a> </li>
         <li><a href="/Admin/course-detail.html" >Add Teachers</a> </li>  
         </ul>
         <span class="username" th:text{}>shubdha patil ma'am</span>
         <span class="profile" th:img src {} ><img src="/Admin/proflie.png" alt=""></span>
-        <img src="/Admin/setting.png" alt="" class="settings" >
+        <img src="../img/Setting2.jpg" alt="" class="settings" >
        
     </nav>
     <h2>COURSE DETAILS</h2>

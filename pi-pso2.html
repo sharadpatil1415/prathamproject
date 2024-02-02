@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI-PSO1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Young+Serif&display=swap" rel="stylesheet">
+   
+</head>
+<style>
+    *
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Young Serif', serif; */
+    /* background: #F6F6F6; */
+}
+
+.navbar {
+    background-color: #095899;
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.eng_logo {
+    border-radius: 5px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px; 
+
+}
+
+nav a {
+   position: relative;
+   left: 932px;
+    background-color: #095899;
+    text-decoration: none;
+    color: black;
+}
+
+.username {
+    margin-left: auto;
+    margin-right: 20px;
+    color: black;
+}
+
+.profile img {
+    height: 56px;
+    border-radius: 50%;
+}
+
+.settings {
+    height: 56px;
+    margin-left: 20px; 
+}
+.direct{
+    margin: 10px;
+}
+.pso{
+    margin: 30px;
+    width: 50%;
+    border: 0.5px solid #B4B4B4;
+    height: 70px;
+    border-radius: 5px;
+    padding: 5px;
+}
+    
+.pso p{
+     margin: 15px 0px; 
+    text-align: center;
+}
+.pso-comp{
+    margin: 20px 50px;
+    width: 70%;
+    border: 0.5px solid #B4B4B4;
+    color: #095899;
+    height: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+}
+#popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif; 
+    }
+
+    #popup {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 650px; /* Set your desired width */
+      height: 200px; /* Set your desired height */
+      font-family: 'Poppins', sans-serif; 
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #163b8c;
+     color: white;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #249242;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+  }
+  
+  button:hover {
+      background-color: #333;
+  }
+  button.success {
+      background-color: #2ecc71;
+      color: #fff;
+  }
+  
+  button.success:hover {
+      background-color: #27ae60;
+  }
+
+    /* Close Button Styles */
+    #close-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+    }
+</style>
+<body>
+  <nav class="navbar">
+    <img src="img/eng_logo.png" alt="" class="eng_logo">
+    <!-- <img src="settings.jpg" alt="settings" class="eng_logo"> -->
+   <ul> 
+    <li> <a href="/Admin/coursedetails.html" > Add Course</a> </li>
+    <li><a href="/Admin/course-detail.html" >Add Teachers</a> </li>  
+    </ul>
+    <span class="username" th:text{}>shubdha patil ma'am</span>
+    <span class="profile" th:img src {} ><img src="/Admin/proflie.png" alt=""></span>
+    <img src="img/Setting2.jpg" alt="" class="settings" >
+   
+</nav>
+    <div class="direct">
+        <span>Courses >> Computer Organization & Microprocessors-TH >> PSO 1</span> 
+     </div>
+ 
+     <div class="pso">
+         <p >To design and manufacture the components and system as per requirement.</p>
+     </div>
+     
+     <div>
+         <div class="pso-comp">
+             <p>Demonstrate an ability to define a complex/open ended problem in thermal engineering by using relevant engineering codes and standards. </p>
+         </div>
+         
+         <div class="pso-comp">
+             <p>Demonstrate an ability to conduct investigation and solve technical issues in thermal systems.</p>
+         </div>
+         <div class="pso-comp">
+             <p>Apply management principles to solve organizational problems.</p>
+         </div>
+     </div>
+
+    <!-- <button onclick="openPopup()">Open Popup</button> -->
+
+  <!-- Popup Container -->
+  <div id="popup-container">
+    <div id="popup">
+      <span id="close-btn" onclick="closePopup()">&times;</span>
+      <h4>PROGRAM INDICATOR 1.1.1</h4>
+      <table>
+        <thead>
+          <tr>
+            <th><center>CO1</center></th>
+            <th><center>CO2</center></th>
+            <th><center>CO3</center></th>
+            <th><center>CO4</center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+            <td>
+              <center>
+                <select>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </center>
+              </td>
+              <td>
+                <center>
+                  <select>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </center>
+                </td>
+                <td>
+                  <center>
+                    <select>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </center>
+                  </td>
+                  <td>
+                    <center>
+                      <select>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </center>
+                    </td>
+              
+          </tr>
+          
+        </tbody>
+      </table>
+     <center><button type="button" onclick="submitForm()">SUBMIT</button></center> 
+    </div>
+  </div>
+
+    
+  <script>
+    function openPopup() {
+      document.getElementById('popup-container').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup-container').style.display = 'none';
+    }
+    function submitForm() {
+        // Add your form submission logic here
+        alert('Added Successfully');
+        // You can replace the alert with actual form submission logic
+        // such as sending data to a server using AJAX or updating the page
+      }
+  </script>
+</body>
+</html>
