@@ -36,6 +36,7 @@ th, tr, td {
 th {
     background-color: #E5F2FC;
     color: #095899;
+    text-align: center;
 }
 
 td {
@@ -58,8 +59,8 @@ td {
 
 .popup button {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 81px;
+    left: 500px;
     background: none;
     border: none;
     cursor: pointer;
@@ -116,7 +117,21 @@ nav a {
     margin-left: 20px; 
  
 }
+.closeBtn {
+    position: absolute;
+    top: -36px;
+    right: -19px;
+    font-size: 30px;
+    cursor: pointer;
+    background: transparent;
+    font-weight: bolder;
+  }
 
+  .closeBtn:hover{
+      
+      
+    color: #ab350d;
+}
 </style>
 <body>
     <nav class="navbar">
@@ -133,6 +148,7 @@ nav a {
     </nav>
 
     <table>
+        
         <tr>
             <th>Sr. no</th>
             <th>Faculty</th>
@@ -161,22 +177,29 @@ nav a {
         <tr>
             <td>5</td>
             <td>Faculty name</td>
-            <td onclick="showPopup('Subject 5', 'Faculty 5')">Subjects</td>
+            <td onclick="showPopup('Subject 4', 'Faculty 4')">Subjects</td>
         </tr>
+        
         <!-- Add more rows as needed -->
+        <!-- <button class="back-btn"  onclick="hidePopup()"></button> -->
     </table>
     <!-- <button class="btn btn-success add-admin-btn">Add as admin</button> -->
-
-    <div id="subjectPopup" class="popup"></div>
+    
+    <div id="subjectPopup" class="popup"> 
+        
+    </div>
 
     <script>
-        function showPopup(subject, faculty) {
+       function showPopup(subject, faculty) {
     const popup = document.getElementById('subjectPopup');
+    
     popup.innerHTML = `
-       <button onclick="hidePopup()">&#8592;</button>
-       <center><h2 style="margin-bottom: 10px; font-size:20px; font-weight: bold;">Allocated Subject</h2></center>
+
+    
+    <center><h2 style="margin-bottom: 10px; font-size:20px; font-weight: bold;">Allocated Subject</h2></center>
         <h3 style="margin-bottom: 10px; font-size:20px;">Faculty Name: ${faculty}</h3>
         
+      
         <table>
             <tr>
                 <th>Sr. No</th>
@@ -200,8 +223,8 @@ nav a {
             </tr>
           
         </table>
-        <button class="btn btn-success add-admin-btn">Add as admin</button>
-    `;
+        <span class="closeBtn" onclick="closePopup()">&times;</span>
+        <button class="btn btn-success add-admin-btn">Add as admin</button> `;
     popup.style.display = 'block';
 }
 
@@ -209,6 +232,11 @@ function hidePopup() {
     const popup = document.getElementById('subjectPopup');
     popup.style.display = 'none';
 }
+
+function closePopup() {
+document.getElementById('subjectPopup').style.display = 'none';
+}
+
     </script>
 
 </body>
