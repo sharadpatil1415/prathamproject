@@ -258,40 +258,50 @@ button.success:hover {
     <h3>Competancy : </h3>
 
     <div class="dropdown">
-      <button onclick="toggleDropdown()" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
-      <div id="myDropdown" class="dropdown-content">
-          <a href="#" class="des" onclick="openPopup()">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
-          <a href="#" class="des" onclick="openPopup()">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
+      <button onclick="toggleDropdown('dropdown1')" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
+      <div id="dropdown1" class="dropdown-content">
+          <a href="#" class="des" onclick="openPopup('dropdown1')">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
+          <a href="#" class="des" onclick="openPopup('dropdown1')">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
       </div>
   </div>
   
   <div class="dropdown">
-    <button onclick="toggleDropdown()" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
-    <div id="myDropdown" class="dropdown-content">
-        <a href="#" class="des" onclick="openPopup()">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
-        <a href="#" class="des" onclick="openPopup()">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
+      <button onclick="toggleDropdown('dropdown2')" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
+      <div id="dropdown2" class="dropdown-content">
+          <a href="#" class="des" onclick="openPopup('dropdown2')">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
+          <a href="#" class="des" onclick="openPopup('dropdown2')">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
+      </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="toggleDropdown('dropdown1')" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
+    <div id="dropdown1" class="dropdown-content">
+        <a href="#" class="des" onclick="openPopup('dropdown1')">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
+        <a href="#" class="des" onclick="openPopup('dropdown1')">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
     </div>
 </div>
 
 <div class="dropdown">
-  <button onclick="toggleDropdown()" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
-  <div id="myDropdown" class="dropdown-content">
-      <a href="#" class="des" onclick="openPopup()">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
-      <a href="#" class="des" onclick="openPopup()">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
+  <button onclick="toggleDropdown('dropdown2')" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
+  <div id="dropdown2" class="dropdown-content">
+      <a href="#" class="des" onclick="openPopup('dropdown2')">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
+      <a href="#" class="des" onclick="openPopup('dropdown2')">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
   </div>
 </div>
+
 <div class="dropdown">
-  <button onclick="toggleDropdown()" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
-  <div id="myDropdown" class="dropdown-content">
-      <a href="#" class="des" onclick="openPopup()">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
-      <a href="#" class="des" onclick="openPopup()">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
+  <button onclick="toggleDropdown('dropdown3')" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
+  <div id="dropdown3" class="dropdown-content">
+      <a href="#" class="des" onclick="openPopup('dropdown3')">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
+      <a href="#" class="des" onclick="openPopup('dropdown3')">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
   </div>
 </div>
+
 <div class="dropdown">
-  <button onclick="toggleDropdown()" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
-  <div id="myDropdown" class="dropdown-content">
-      <a href="#" class="des" onclick="openPopup()">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
-      <a href="#" class="des" onclick="openPopup()">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
+  <button onclick="toggleDropdown('dropdown4')" class="dropbtn">1.1: Demonstrate competence in mathematical modelling</button>
+  <div id="dropdown4" class="dropdown-content">
+      <a href="#" class="des" onclick="openPopup('dropdown4')">1.1.1: Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems</a>
+      <a href="#" class="des" onclick="openPopup('dropdown4')">1.1.2: Apply advanced mathematical techniques to model and solve mechanical engineering problems</a>
   </div>
 </div>
     
@@ -357,15 +367,15 @@ button.success:hover {
     // let des = document.getElementById('des');
     let des = document.querySelectorAll('.des');
 
-    function openPopup() {
-      // Hide the dropdown
-      var dropdown = document.getElementById("myDropdown");
-      dropdown.style.display = "none";
+  //   function openPopup() {
+  //     // Hide the dropdown
+  //     var dropdown = document.getElementById("myDropdown");
+  //     dropdown.style.display = "none";
   
-      // Display the popup
-      var popupContainer = document.getElementById("popup-container");
-      popupContainer.style.display = "flex";
-  }
+  //     // Display the popup
+  //     var popupContainer = document.getElementById("popup-container");
+  //     popupContainer.style.display = "flex";
+  // }
   
 
 function closePopup() {
@@ -373,20 +383,30 @@ function closePopup() {
   des.style.display = 'block';
 }
         function submitForm() {
-            
             alert('Added Successfully');
-            
           }
 
-          function toggleDropdown() {
-            var dropdown = document.getElementById("myDropdown");
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "block";
-            }
-        }
+          function toggleDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
+}
+
+function openPopup(dropdownId) {
+    // Hide the dropdown
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = "none";
+  
+    // Display the popup
+    var popupContainer = document.getElementById("popup-container");
+    popupContainer.style.display = "flex";
+}
         
+
+       
       </script>
 
      
