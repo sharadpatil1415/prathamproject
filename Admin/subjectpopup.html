@@ -116,9 +116,7 @@ nav a {
     margin-left: 20px; 
  
 }
-.add-admin-btn{
-    align-items: center;
-}
+
 </style>
 <body>
     <nav class="navbar">
@@ -179,8 +177,6 @@ nav a {
        <center><h2 style="margin-bottom: 10px; font-size:20px; font-weight: bold;">Allocated Subject</h2></center>
         <h3 style="margin-bottom: 10px; font-size:20px;">Faculty Name: ${faculty}</h3>
         
-
-
         <table>
             <tr>
                 <th>Sr. No</th>
@@ -202,8 +198,9 @@ nav a {
                 <td>4</td>
                 <td>${subject}</td>
             </tr>
-            <!-- Add more rows as needed -->
+          
         </table>
+        <button class="btn btn-success add-admin-btn">Add as admin</button>
     `;
     popup.style.display = 'block';
 }
